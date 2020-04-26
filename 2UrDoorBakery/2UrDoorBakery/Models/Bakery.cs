@@ -7,7 +7,8 @@ namespace _2UrDoorBakery.Models
 {
     public class Bakery
     {
-        public int BakeryID { get; set; }
+        public int BakeryId { get; set; }
+        public string Name { get; set; }
         public decimal Price { get; set; }
         public string Description { get; set; }
         public string ImageThumbnailUrl { get; set; }

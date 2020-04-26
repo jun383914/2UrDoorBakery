@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace _2UrDoorBakery.Models
 {
-    public interface IBakeryRepository
+    public interface IOrderRepository
     {
-        public IEnumerable<Bakery> AllBakery { get; }
-        Bakery GetBakeryById(int bakeryId);
+        void CreateOrder(Order order);
     }
 }

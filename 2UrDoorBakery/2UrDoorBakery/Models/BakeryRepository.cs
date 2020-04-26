@@ -7,26 +7,26 @@ namespace _2UrDoorBakery.Models
 {
     public class BakeryRepository : IBakeryRepository
     {
-        private readonly IBakeryRepository _bakeryRepository;
+        //This repository will work with my DbContext
+        private readonly BakeryDbContext _bakerydbContext;
 
-        public BakeryRepository(IBakeryRepository bakeryRepository)
+        public BakeryRepository(BakeryDbContext bakerydbContext)
         {
-            _bakeryRepository = bakeryRepository;
+            _bakerydbContext = bakerydbContext;
         }
 
-        public IEnumerable<Bakery> GetBakeryByName(string name)
+        public IEnumerable<Bakery> AllBakery
         {
-            var query = from r in 
-                        where r.Name.StartsWith(name) || string.IsNullOrEmpty(name)
-                        orderby r.Name
-                        select r;
-            return query;
+            get
+            {
+                return _bakerydbContext.Bakery;
+            }
         }
-        
 
-        public Bakery GetBakeryById(int BakeryId)
+
+        public Bakery GetBakeryById(int bakeryId)
         {
-            throw new NotImplementedException();
+            return _bakerydbContext.Bakery.FirstOrDefault(p => p.BakeryId == bakeryId);
         }
     }
 }
