@@ -8,3 +8,9 @@
 - Entity Framework
 - Data Binding
 
+
+### New Features in Plan
+- Implementing Partial View/ViewComponent
+- Adding Authorization and Authentication
+- Migrate local SQL Database onto Cloud Database
+
