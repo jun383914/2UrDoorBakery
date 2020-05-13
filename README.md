@@ -2,5 +2,9 @@
 ## Why am I doing this project?
 
 
-### Place holder
-- placeholder points
+### Techniques Used
+- Model-View-Controller(MVC)
+- Razor Pages View
+- Entity Framework
+- Data Binding
+
